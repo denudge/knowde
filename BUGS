@@ -1,0 +1,10 @@
+# This is the BUGS file for knowde
+
+Please report a bug if you find one.
+
+Currently known bugs:
+
+- fonts and colors don't get exported to HTML
+- HTML export menu item has no icon
+- HTML export is not yet implemented for files
+

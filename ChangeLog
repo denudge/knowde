@@ -1,0 +1,353 @@
+# This is the ChangeLog for knowde
+
+18.07.2004 (1.8.0):
+	- edited Reader-class to clear buffer on File/Close
+	- finally implemented the keyword-based reference in Reader class
+	- added help text function to Reader and Menu class
+
+17.07.2004 (1.7.9):
+	- edited Reader class to parse keywords
+	- bug-fixed double-selection bug in MainWindow::selectKnowde
+
+16.07.2994 (1.7.8):
+	- added file default font to KnowdeFile class
+	- added XML loading and saving for file default font
+	- added switch for layout use to the editor text field
+	- added apply button to Editor class for quick changes
+	- added file default font functionality to Layouter class
+
+15.07.2004 (1.7.7):
+	- bug-fixed Editor to call Layouter::applyValues
+	- bug-fixed Layouter class to apply values only when ok
+	- bug-fixed Reader class set default text font in-between
+	- edited Layouter class to show selected text font as is
+	- added text and background color functionality to Layouter
+	- edited Reader class to change text and background color
+	- added XML loading and saving for text and background color
+
+14.07.2004 (1.7.6):
+	- added tab char replacement to ExportHTML::saveXMLString
+	- applied Joe Klemmer's install patch to the Makefile
+	- added Layouter class and Layouter tab to Editor dialog
+	- added font and color attributes to Knowde class
+	- added font and color functionality to Knowde class
+	- added XML loading and saving for text font attribute
+	- added text font loading to Reader class
+
+13.07.2004 (1.7.5):
+	- changed source file_names to FileNames
+	- edited source files and Makefile to respect the change
+	- added Export and ExportHTML classes
+	- implemented single knowde HTML export
+	- added HTML export to config.h and Menu class
+	- updated MainWindow::updateActivation()
+
+08.07.2004 (1.7.3):
+	- changed Dater to static member of Editor
+	- removed file_dialog from MainWindow class
+	- removed old comments
+	- bug-fixed format string in DatePoint::print
+
+07.04.2004 (1.7.2):
+	- bug-fixed tree search algorithm
+	- removed Questioner class from code base (now using GtkDialog)
+	- many code cleanups in MainWindow class
+
+14.02.2004 (1.7.1):
+	- edited the INSTALL file for more information
+
+05.02.2004 (1.7.1):
+	- bug-fixed knowde selection endless loop in all tree classes
+	- added last_edited label to about dialog
+
+04.02.2004 (1.7.0):
+	- introduced TimeView class
+	- modified MainWindow to install TimeView
+	- bug-fixed MainWindow update functions
+	- modified ListView tree header
+	- extended tree model by path column (TimeView)
+	- extended knowde class by date string
+	- introduced new sorting function for TimeView class
+
+03.02.2004 (1.6.7):
+	- bug-fixed context menus
+	- modified tree sorting to use utf8-style
+	- added Ctrl-S key accel for File/Save action
+	- bug-fixed copy and paste: set changed flag
+	- modified Statusbar size display to display size sum
+
+02.02.2004 (1.6.6):
+	- added About dialog
+	- removed unused Help menu item from menu
+	- added toggle tree view button in toolbar
+	- added more key accelerators
+	- added key accelerator label in menu items
+	- added stock images in menu items
+	- centralized dialog centering into MainWindow
+
+01.02.2004 (1.6.5):
+	- bug-fixed TreeView search function
+	- bug-fixed MainWindow to allow paste clipboard as top knowde
+	- bug-fixed MainWindow::getSelectedKnowde() to return NULL when no file
+	- added keypress callback function
+	- added first knowde Edit/Cut action on pressing delete
+	- added double-click callback in TreeView that opens Editor
+
+28.01.2004 (1.6.4):
+	- bug-fixed Knowde class (Date cloning)
+
+27.01.2004 (1.6.3):
+	- bug-fixed Dater class (memory allocation)
+	- modified editor to always start with the general page
+
+26.01.2004 (1.6.3):
+	- added startup parameter file loading (thx to Fabian Haensel)
+	- added question dialog callbacks
+	- added DatePoint functionality to Knowde class
+	- added DatePoint functionality to KnowdeFile class (save and load)
+	- bug-fixed save and quit action
+	- added date to Editor class
+	- modified DatePoint class for simplification
+
+25.01.2004 (1.6.2):
+	- added closeFile() and loadFile() to MainWindow class
+	- added question dialog to propose save on new, open, close and quit
+	- introduced DatePoint class for later use in timeline view
+
+20.01.2004 (1.6.1):
+	- bug-fixed tree sorting
+
+19.01.2004 (1.6.1)
+	- modified Searcher class dialog layout
+	- code cleanups
+	- bug-fixed traverse function for REMOVE* commands
+	- added tree sorting
+
+18.01.2004 (1.6.0):
+	- added search dialog elements
+	- bug-fixed search() and find() functions in TreeView class
+	- added SEARCH_NEXT commands to the MainWindow class
+	- added executeSearch() function to Controller interface
+	- implemented executeSearch() function in MainWindow class
+	- bug-fixed callback in Searcher class
+
+17.01.2004 (1.5.1):
+	- added search functions in TreeView class
+	- added search dialog skeleton
+
+16.01.2004 (1.5.0):
+	- bug-fixed update callback functions
+	- bug-fixed insertKnowde functions in TreeView and ListView class
+	- added conviniency function for ListView insertion
+	- added reparent, cut and clone functions to the Knowde class
+	- added clipboard and clearClipboard() to the MainWindow class
+	- added copy, cut (to clipboard) and paste functions
+	- fixed bug in Knowde::clone() function
+
+07.12.2003 (1.4.2):
+	- bug-fixed node remove functions in TreeView (parent dependency problem)
+
+05.12.2003 (1.4.1):
+	- fixed many bugfixes in new ListView and TreeView code
+	- added selection function for TreeView class
+	- fixed traverse function bugs in TreeView class
+	- fixed removeKnowde bug in TreeView class
+	- added removeKnowde function to KnowdeFile class
+
+04.12.2003 (1.4.0):
+	- added keywords field in Knowde class
+	- added keywords functionality in Knowde class
+	- added keywords field in Editor class
+	- added second TreeView (ListView) for keyword indices
+	- added convinient traverse function for TreeView class
+	- added traverse conditions and intentions
+
+03.12.2003 (1.3.3):
+	- speed enhancements in TreeView class
+	- added some functionality for FILE_QUIT actions (not yet complete!)
+
+02.12.2003 (1.3.2):
+	- fixed XML file export bug (too many whitespaces)
+
+26.11.2003 (1.3.1):
+	- fixed NULL pointer bug in MainWindow class
+	- fixed NULL pointer bug in Reader class
+	- added convenience function in Reader class
+	- added "changed" state functionality to MainWindow class
+	- added keyword combo box in reader
+
+25.11.2003 (1.3.0):
+	- added XML file import
+	- fixed XML file export
+	- added FILE_SAVE_AS and FILE_CLOSE functionality
+	- added convinience functionality to Knowde and KnowdeFile classes
+	- changed KnowdeFile::save() policy (now newlines are allowed)
+	- removed CODING_POLICY file
+
+24.11.2003 (1.2.5):
+	- added XML file import skeleton
+	- added FileSelection to functions
+	- fixed FileSelection callback mechanism
+	- added title update function in main window
+
+23.11.2003 (1.2.0):
+	- fixed compilation headers
+	- added XML file export
+	- added functions to handle non-ascii characters
+
+21.11.2003 (1.1.6):
+	- added statusbar functionality
+	- modified statusbar to display knowde size as -h option
+
+19.11.2003 (1.1.5):
+	- added more toolbar buttons
+	- added reader on the right side
+	- modified knowde class to allow long titles and descriptions
+	- modified some classes to get internationalization
+	- wrapped scrolling around text reader and tree browser
+	- modified reader and editor to look alike
+	- added statusbar to the main window
+
+18.11.2003 (1.1.4):
+	- added toolbar with gtk stock images
+	- added own pixmaps for knowde functions
+	- moved some definitions from class headers into config.h
+	- modified the Makefile to consider pixmap changes
+	- splitted xpm.h into tree_xpm.h and toolbar_xpm.h to suppress compiler
+	  "unused variable" warnings
+	- modified the Makefile to generate .po translation files
+
+17.11.2003:
+	- added populate-function for the TreeView
+	- added popup menu
+	- added tree functionality
+	- changed executor class to central controller class
+
+16.11.2003:
+	- added knowde editor class
+	- extended knowde functionality
+	- added KnowdeFile class
+
+15.11.2003 (1.1.3):
+	- established basic application framework
+	- added automated menu creation, command code, quit function
+
+14.11.2002 ----------
+	- started complete rewrite in C++
+	- basic data and application class design
+
+09.10.2002 (1.1.2):
+	- added functionality for editing knowdes (editor)
+
+08.10.2002 (1.1.1):
+	- complete rewrite started to upgrade to gtk+-2 and libxml2
+
+05.07.2002 (1.0.2):
+	- bugfixed title update function in func.c
+	- bugfixed knowdefile_new function in data.c
+
+25.06.2002 (1.0.1):
+	- added special character quotation to xmlfile.c
+
+23.06.2002 (1.0.0):
+	- added warning dialog when choosing a wrong filename
+	- added save option when quitting/closing a modified file
+	- fixed segmentation fault when choosing an empty filename
+	- added a about dialog
+
+21.06.2002 (0.9.7):
+	- implemented a highlightning function for search results
+	- added warning when search is less than 3 letters
+	- fixed memory leak when closing editor dialog
+	- compiled knowde for windows with cygwin
+	- added search field options
+	- improved mouse handling on the tree area
+
+12.06.2002 (0.9.1):
+	- implemented own routine called mystrstr, that covers
+		both case-sensitive as insensitive
+	- left -lintl ouf of the Makefile (compiles anyway)
+
+07.06.2002 (0.9.0):
+	- added search algorithm
+	- added two new structs: MessageDialog and SearchDialog
+	- added functionality for handling searches
+	- cleaned up knowde selection in func.c
+	- now also menubar points are checked
+	- added the official GPL copying file
+	- added README and INSTALL
+	- set word wrap active on the text fields
+
+04.06.2002 (0.7.3):
+	- added references to the XML save scheme
+	- added references to the XML loading procedure
+	- now references are order alphabetically
+
+03.06.2002 (0.7.2):
+	- cleaned up the code part 2: new function
+		knowdetool_get_selected_knowde makes smaller binary
+	- bugfixed cut_to_clipboard functions
+		1. the tree node was NULLed before it was removed,
+		2. the parent node still had a link to this child
+	- now context menu items are set sentitive only if needed
+	- added new "jump" button for calling references
+	- bugfixed activation of the references combo list
+	- added callback function for calling references
+	- updated description files
+
+03.06.2002 (0.7.1):
+	- cleaned up some parts of the callback code
+	- added reference functionality in data.c/h and func.c/h
+	- added menu items and callback functions for references
+	- added raw update function for the references combo box
+
+29.05.2002 (0.7.0):
+	- added copy, cut and paste functionality
+	- changed data policy (now top knowdes are allowed)
+	- bugfixed many problems (inserting etc)
+	- added alphabetical ordering of elements
+	- added sibling folder/knowde creation
+	- added file handling routines close and save
+	- added filename in title
+
+21.05.2002 (0.6.0):
+	- added xmlfile.c for parsing and writing of XML files
+	- added knowdefile_save() and knowdefile_append_from_file()
+	- fixed a bug that caused no update of the right side
+		when opening an edit menu on folders
+
+20.05.2002 (0.5.0):
+	- added functionality for updating knowdes in the tree
+	- completed editor dialog (still not the best!)
+	- added functionality for updating the right side
+
+19.05.2002 (0.3.5):
+	- changed internal structure to a tree
+	- redesigned the Knowde struct
+	- added adding and deleting functionality
+	- added context menus
+	- added callback functions for adding/deleting
+	- added complete document freeing on close
+
+18.05.2002 (0.2.2):
+	- added Knowde hash creation
+	- added create_knowde function
+	- added a callback function, but it doesn't work yet
+
+18.05.2002 (0.2.1):
+	- created structs: KnowdeFile and KnowdeLink
+	- added func.c/.h
+	- added some basic data functionality
+	- added xpm.h
+	- changed KnowdeTool (now includes a KnowdeFile and the xpm fields)
+
+17.05.2002 (0.2):
+	- created structs: Knowde
+	- created initial window layout and widgets
+	- added data.c/.h and menu.c
+
+16.05.2002 (0.1):
+	- initial release
+	- created structs: KnowdeTool and KnowdeMenu
+	- created empty main window
+	- created small Makefile and a directory structure

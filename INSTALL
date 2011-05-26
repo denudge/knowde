@@ -1,0 +1,110 @@
+# This is the INSTALL file of knowde
+
+    System Requirements
+    ===================
+
+This tool has been designed on a Debian Woody Linux.
+Until version 1.0.0, other systems (including Win32)
+had not been supported. If you have problems compiling
+the tool, at first try to check the Makefile manually.
+It's not a big thing. If you already took a loot at it
+and found you can help and improve portability, then
+please change it and send it back to me. Also libxml,
+GTK+ and some standard C/C++ libraries/headers are required.
+
+    Compilation Preparation
+    =======================
+    
+At first, unpack the gnu-zipped source tarball.
+
+    user@host:somedir# tar -zxlvf knowde_1.7.1.tgz
+    
+This should result in a subdirectory called knowde.
+Change to this directory to do the next steps. 
+
+    user@host:somedir# cd knowde
+    
+In this directory, you should have some files like
+Makefile(s), README, this INSTALL(!!), BUGS and
+again some subdirectories like src/, lib/, bin/
+and so on. Since you are reading this INSTALL file,
+I guess you have proceeded successfully so far.
+
+    Compilation Under Linux or Win32 w/ MinGW w/ MSys
+    ========================================
+    
+Make sure you have libxml2 (2.6.0 or higher) and
+GTK+ (2.0 or higher) properly installed. You can
+check the GTK+ installation by
+
+    user@host:knowde# pkg-config gtk+-2.0 --modversion 
+
+There should be something like "2.2.4" or so, but
+it could be anything else. If it returnes an
+error message like "command not found", then there
+is at even no pkg-config installed. www.gtk.org
+tells you more how to install the whole package.
+Otherwise, guessing everything is fine, we go on
+with editing the Makefile (if you want) and compile
+the knowde source files to binaries.
+
+    user@host:knowde# vi Makefile (for CPU types and optimizations)
+
+The line which is most interesting is:
+    
+    CC=g++ -Wall -O4 -mcpu=i686 -march=i686
+
+This means that the code will be optimized and compiled
+only for Pentium-II or later Intel/Athlon processors.
+This should be a common thing. If you have a different
+architecture, then you could delete the last two options
+what results in a general executable code, or switch to
+other optimization options that fit your architecture.
+ 
+    user@host:knowde# make
+
+Then type 'make' in the knowde directory.
+It should then result in a binary (bin/knowde).
+If you have the appropriate rights, you may copy
+the binary to a global executables directory like
+/usr/local/bin:
+
+    user@host:knowde# cp bin/knowde /usr/local/bin
+
+Now you're done. Execute Knowde to make sure everything
+went fine, but I'm sure it did:
+
+    user@host:knowde# /usr/local/bin/knowde
+
+The directory your into right now is not needed afterwards,
+if you copied the binary somewhere else. You can savely
+delete it to save disk space:
+
+    user@host:knowde# cd ..
+    user@host:somedir# rm -rf knowde/
+
+Have fun.
+
+    Compilation on Win32 w/ MinGW w/o MSys
+    ========================================
+    
+This is more complicated and is not recommended, because
+you cannot use pkg-config in the Makefile itself. If you
+have succedeed in installing gnu command line tools in the
+Win32 environment, then you're no beginner, so I will keep
+this section rather short.
+  
+You have two options:
+
+    1st) edit the Makefile, an bring in your pkg-config results
+    
+    2nd) edit the Makefile.MinGW, and set the root directories there
+    
+If you're done in the Makefile.MinGW, then you could simply go on
+with the standard procedure:
+
+    knowde# make
+    knowde# copy bin\knowde.exe C:\WINDOWS
+    knowde# knowde
+
+Now should have the whole thing compiled and running. Have fun!

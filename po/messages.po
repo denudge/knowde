@@ -1,0 +1,124 @@
+#: src/editor.cc:48 src/editor.cc:68
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#: src/main_window.cc:25
+msgid "Choose a file..."
+msgstr ""
+
+#: src/menu.cc:36
+msgid "Clear Clipboard"
+msgstr "Zwischenablage leeren"
+
+#: src/menu.cc:13 src/menu.cc:23
+msgid "Close"
+msgstr "Schließen"
+
+#: src/menu.cc:38
+msgid "Connect Reference"
+msgstr "Referenz verbinden"
+
+#: src/menu.cc:31 src/menu.cc:34
+msgid "Copy"
+msgstr "Kopieren"
+
+#: src/tree_view.cc:147
+msgid "Could not find a selection.\n"
+msgstr ""
+
+#: src/menu.cc:37
+msgid "Create Reference"
+msgstr "Referenz erzeugen"
+
+#: src/menu.cc:30 src/menu.cc:33
+msgid "Cut"
+msgstr "Ausschneiden"
+
+#: src/editor.cc:25 src/editor.cc:18 src/reader.cc:8
+msgid "Description: "
+msgstr "Beschreibung: "
+
+#: src/menu.cc:39
+msgid "Disconnect Reference"
+msgstr "Referenz trennen"
+
+#: src/menu.cc:29
+msgid "Edit"
+msgstr "Editieren"
+
+#: src/editor.cc:19 src/reader.cc:32
+msgid "Keywords: "
+msgstr ""
+
+#: src/statusbar.cc:40
+msgid "Knowde Size"
+msgstr ""
+
+#: src/tree_view.cc:18
+msgid "Knowde Tree Browser"
+msgstr ""
+
+#: src/editor.cc:111 src/editor.cc:126
+msgid "Knowde was NULL\n"
+msgstr "Knowde war NULL\n"
+
+#: src/editor.cc:96
+msgid "Knowde was NULL!\n"
+msgstr "Knowde war NULL!\n"
+
+#: src/editor.cc:42 src/reader.cc:29
+msgid "Meta Information"
+msgstr ""
+
+#: src/menu.cc:9 src/menu.cc:19
+msgid "New"
+msgstr "Neu"
+
+#: src/menu.cc:34 src/menu.cc:31
+msgid "New Sibling Knowde"
+msgstr "Neue Knowde"
+
+#: src/menu.cc:35 src/menu.cc:32
+msgid "New Sub Knowde"
+msgstr "Neue Unter-Knowde"
+
+#: src/menu.cc:33 src/menu.cc:30
+msgid "New Top Knowde"
+msgstr "Neue Top-Knowde"
+
+#: src/editor.cc:51 src/editor.cc:69
+msgid "OK"
+msgstr "OK"
+
+#: src/menu.cc:10 src/menu.cc:20
+msgid "Open"
+msgstr "Öffnen"
+
+#: src/menu.cc:32 src/menu.cc:35
+msgid "Paste"
+msgstr "Einfügen"
+
+#: src/menu.cc:14 src/menu.cc:24
+msgid "Quit"
+msgstr "Beenden"
+
+#: src/menu.cc:11 src/menu.cc:21
+msgid "Save"
+msgstr "Speichern"
+
+#: src/menu.cc:12 src/menu.cc:22
+msgid "Save As"
+msgstr "Speichern unter"
+
+#: src/editor.cc:43 src/editor.cc:65 src/reader.cc:46
+msgid "Text: "
+msgstr "Text: "
+
+#: src/editor.cc:14 src/editor.cc:17 src/reader.cc:7
+msgid "Title: "
+msgstr "Titel: "
+
+#: src/knowde.cc:19
+msgid "[noname]"
+msgstr ""
+

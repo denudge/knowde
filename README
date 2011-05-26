@@ -1,0 +1,40 @@
+# This is the README for knowde
+
+How to use the new keyword-based reference system
+----------------------------------------------------
+
+Giving a knowde keywords is simple and doesn't need
+further explanation. If you have organized your knowdes
+in trees in a reasonable manner, sometimes theres no
+need for keywords. But sometimes, information that is
+best grouped together is divided into different branches
+in the tree. Here you can give similar information
+equal keywords and see how they relate in a) the keyword
+tree view (click the "Toggle Tree View" to cycle through
+the 3 views) and now also b) in the keyword reference
+choice list which is located on the right side just above
+the text field. If there is another knowde that is given
+the same keyword, then there appears the keyword and below
+the titles of knowdes referenced by. Clicking the knowde
+titles takes you immediately to them to see the full
+information.
+
+
+Upgrading from 1.0.2 or earlier  to  1.1.1 or higher
+----------------------------------------------------
+
+There is an incompatibility in the structure of
+knowde files because now there is no more distinction
+between folders and knowdes - every knowde can be
+folder of other knowdes or, seen from a different
+perspective, folders can now contain data.
+
+To load your old files into a newer version of knowde,
+simply replace all strings "folder" in your xml file
+with the string "knowde". That's all. Add the encoding
+also, if it has changed or was not in UTF-8. Because
+now with libxml2 and Gtk+-2.0, we have to work in UTF-8.
+
+See http://www.lieber-media.de/knowde/ for more detailed
+information.
+

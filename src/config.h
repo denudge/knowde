@@ -1,0 +1,56 @@
+#ifndef __CONFIG_H__
+#define __CONFIG_H__
+
+#include <libintl.h>
+
+#define _(x) gettext(x)
+
+#define TOOLBAR_ICON_SIZE GTK_ICON_SIZE_MENU
+
+#define APP_NAME "Knowde"
+#define APP_VERSION "1.8.0"
+#define APP_EMAIL "big_chief@gmx.de"
+#define APP_GNU "published under the terms of the GNU Public License"
+#define APP_COPYRIGHT "(c) 2002-2004 Mathias Lieber (a.k.a. Nudge)"
+#define APP_DATE "17. 07. 2004"
+
+typedef int Activation;
+
+typedef enum {
+	CMD_NONE,
+	
+	CMD_FILE_NEW,
+	CMD_FILE_OPEN,
+	CMD_FILE_SAVE,
+	CMD_FILE_SAVE_AS,
+	CMD_FILE_CLOSE,
+	CMD_FILE_QUIT,
+	
+	CMD_EDIT_EDIT,
+	CMD_EDIT_COPY,
+	CMD_EDIT_CUT,
+	CMD_EDIT_PASTE,
+	CMD_EDIT_CLEAR_CLIPBOARD,
+	CMD_EDIT_NEW_TOP_KNOWDE,
+	CMD_EDIT_NEW_SIBLING_KNOWDE,
+	CMD_EDIT_NEW_SUB_KNOWDE,
+	CMD_EDIT_CREATE_REFERENCE,
+	CMD_EDIT_CONNECT_REFERENCE,
+	CMD_EDIT_DISCONNECT_REFERENCE,
+
+	CMD_VIEW_TOGGLE_TREEVIEW,
+
+	CMD_SEARCH_SEARCH,
+	CMD_SEARCH_SEARCH_NEXT,
+
+	CMD_EXPORT_KNOWDE_AS_HTML,
+	CMD_EXPORT_FILE_AS_HTML,
+
+	CMD_HELP_ABOUT,
+	CMD_HELP_HELP,
+	
+	N_COMMANDS
+} Command;
+
+#endif
+
